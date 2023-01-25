@@ -2,7 +2,7 @@ import 'package:e_learn/core/app_images.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as package;
 
 class NotificationBotton extends StatelessWidget {
   Function()? onTap;
@@ -27,7 +27,7 @@ class NotificationBotton extends StatelessWidget {
           shape: BoxShape.circle,
         ),
 
-        child: Badge(
+        child: package.Badge(
           badgeContent: CustomText(text: (notifNumber == null)? "": notifNumber.toString(),color: Colors.white,),
           child: Image.asset(AppImages.notification,
             fit: BoxFit.fitHeight,
