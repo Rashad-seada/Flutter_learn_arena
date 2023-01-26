@@ -4,6 +4,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../../core/config/app_strings.dart';
 import '../../widgets/custom_text.dart';
+import '../../widgets/space.dart';
 import '../course_card/course_card.dart';
 
 class CourseSection extends StatelessWidget {
@@ -20,14 +21,21 @@ class CourseSection extends StatelessWidget {
       children: [
 
         Padding(
-          padding: EdgeInsets.only(left: 8.5.w),
-          child: CustomText(text: AppStrings.listedInstructor,fontWeight: FontWeight.w400,fontSize: 15.sp,),
+          padding: EdgeInsets.only(left: 7.w),
+          child: CustomText(text: AppStrings.nearByGroups,fontWeight: FontWeight.w400,fontSize: 15.sp,),
         ),
 
+        Space(height: 1.5.h,),
+
         SizedBox(
-          height: 14.h,
-          width: 85.w,
-          child: ListView.builder(itemBuilder: (context,index){
+          height: 15.h,
+          width: 100.w,
+          child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemCount: itemCount,
+              itemBuilder: (context,index){
+
             return AnimationConfiguration.staggeredList(
               position: index,
               duration: const Duration(milliseconds: 375),
@@ -36,8 +44,8 @@ class CourseSection extends StatelessWidget {
                 child: FadeInAnimation(
                   child: Padding(
                     padding: EdgeInsets.only(
-                        top: 5, left: (index == 0)? 30: 10,
-                        right: (index == itemCount - 1)? 30: 0
+                        top: 5, left: (index == 0)? 7.w: 10,
+                        right: (index == itemCount - 1)? 7.w: 0
                     ),
                     child: CourseCard(
 

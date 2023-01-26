@@ -60,6 +60,7 @@ dependencies:
   shared_preferences:
   simple_animations:
   test:
+  shrink_sidemenu:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

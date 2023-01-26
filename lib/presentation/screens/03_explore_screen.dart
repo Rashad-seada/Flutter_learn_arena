@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import '../components/courses_section/courses_section.dart';
 import '../components/custom_app_bar.dart';
 import '../components/custom_chip/custom_chip.dart';
 import '../components/head_title/head_title.dart';
@@ -34,6 +35,10 @@ class ExploreScreen extends StatelessWidget {
               Space(height: 2.h,),
 
               InstructorSection(itemCount: 4,),
+
+              Space(height: 2.h,),
+
+              CourseSection(itemCount: 5,),
 
             ],
           ),

@@ -18,6 +18,8 @@ class AppStrings {
   static const String hi = "Hi,";
   static const String searchBar = "Find any course or instructor";
   static const String listedInstructor = "Listed Instructor";
+  static const String nearByGroups = "Near by Groups";
+
 
 
 }
