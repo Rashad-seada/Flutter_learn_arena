@@ -38,8 +38,8 @@ class CustomChip extends StatelessWidget {
               child: FadeInAnimation(
                 child: Padding(
                   padding: EdgeInsets.only(
-                      top: 5, left: (index == 0)? 30: 10,
-                      right: (index == itemCount - 1)? 30: 0
+                      top: 5, left: (index == 0)? 7.w: 10,
+                      right: (index == itemCount - 1)? 7.w: 0
                   ),
                   child: Chip(
                     labelPadding: EdgeInsets.symmetric(vertical: 4,horizontal: 8),

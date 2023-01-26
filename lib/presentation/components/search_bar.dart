@@ -11,8 +11,9 @@ class SearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal:7.w),
       alignment: Alignment.center,
-      width: 85.w,
+      width: 100,
       height: 6.h,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

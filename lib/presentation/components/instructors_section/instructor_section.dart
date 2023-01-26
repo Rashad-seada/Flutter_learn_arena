@@ -27,13 +27,12 @@ class InstructorSection extends StatelessWidget {
       children: [
 
         Padding(
-          padding: EdgeInsets.only(left: 8.5.w),
+          padding: EdgeInsets.only(left: 7.w),
           child: CustomText(text: AppStrings.listedInstructor,fontWeight: FontWeight.w400,fontSize: 15.sp,),
         ),
 
-        Container(
-
-          height: 10.h,
+        SizedBox(
+          height: 11.h,
           width: 100.w,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -49,8 +48,8 @@ class InstructorSection extends StatelessWidget {
                   child: FadeInAnimation(
                     child: Padding(
                       padding: EdgeInsets.only(
-                          top: 5, left: (index == 0)? 30: 10,
-                          right: (index == itemCount - 1)? 30: 0
+                          top: 5, left: (index == 0)? 7.w: 10,
+                          right: (index == itemCount - 1)? 7.w: 0
                       ),
                       child: InstructorCard(
                         name: 'Rashad Seada',

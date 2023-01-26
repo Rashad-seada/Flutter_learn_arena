@@ -14,6 +14,7 @@ class HeadTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
+      padding: EdgeInsets.symmetric(horizontal:7.w),
       width: 85.w,
       child: CustomText(text: content,fontSize: 22.sp,maxLines: 3,color: Colors.black87,fontWeight: FontWeight.w400,),
     );

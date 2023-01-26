@@ -15,26 +15,23 @@ class ExploreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          body: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          body: ListView(
+            physics: BouncingScrollPhysics(),
             children: [
 
               CustomAppBar(notifNumber: 1,),
 
-              HeadTitle(content: 'Find your favourite instractor here!',),
+              HeadTitle(content: 'Find your favourite instructor here!',),
 
-              Space(height: 2.h,),
+              Space(height: 2.5.h,),
 
               SearchBar(),
 
-              Space(height: .5.h,),
+              Space(height: 1.h,),
 
               CustomChip(itemCount: 6,),
 
               Space(height: 2.h,),
-
-              //InstructorSection(itemCount: 3,),
 
               InstructorSection(itemCount: 4,),
 
