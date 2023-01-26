@@ -1,4 +1,4 @@
-import 'package:e_learn/core/app_strings.dart';
+import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
@@ -31,11 +31,9 @@ class InstructorSection extends StatelessWidget {
           child: CustomText(text: AppStrings.listedInstructor,fontWeight: FontWeight.w400,fontSize: 15.sp,),
         ),
 
-        Space(height: 1.5.h,),
-
         Container(
 
-          height: 7.5.h,
+          height: 10.h,
           width: 100.w,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,

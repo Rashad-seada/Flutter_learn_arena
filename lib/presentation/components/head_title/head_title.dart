@@ -13,10 +13,9 @@ class HeadTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.center,
+      alignment: Alignment.centerLeft,
       width: 85.w,
-      height: 10.h,
-      child: CustomText(text: content,fontSize: 26.sp,maxLines: 3,color: Colors.black87,fontWeight: FontWeight.w400,),
+      child: CustomText(text: content,fontSize: 22.sp,maxLines: 3,color: Colors.black87,fontWeight: FontWeight.w400,),
     );
   }
 }

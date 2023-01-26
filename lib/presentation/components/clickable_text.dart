@@ -1,4 +1,4 @@
-import 'package:e_learn/core/app_theme.dart';
+import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';

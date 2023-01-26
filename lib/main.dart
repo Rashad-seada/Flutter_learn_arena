@@ -1,4 +1,4 @@
-import 'package:e_learn/core/app_theme.dart';
+import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/blocs/main_layout/main_layout_cubit.dart';
 import 'package:e_learn/presentation/screens/00_intro_screen.dart';
 import 'package:flutter/material.dart';

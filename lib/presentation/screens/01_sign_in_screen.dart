@@ -1,5 +1,5 @@
-import 'package:e_learn/core/app_images.dart';
-import 'package:e_learn/core/app_strings.dart';
+import 'package:e_learn/core/config/app_images.dart';
+import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/blocs/main_layout/main_layout_cubit.dart';
 import 'package:e_learn/presentation/components/main_botton.dart';
 import 'package:e_learn/presentation/screens/02_main_layout.dart';

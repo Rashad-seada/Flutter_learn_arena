@@ -1,5 +1,5 @@
-import 'package:e_learn/core/app_strings.dart';
-import 'package:e_learn/core/app_theme.dart';
+import 'package:e_learn/core/config/app_strings.dart';
+import 'package:e_learn/core/config/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sizer/sizer.dart';

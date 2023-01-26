@@ -3,7 +3,7 @@ import 'package:e_learn/presentation/components/custom_page_transition.dart';
 import 'package:e_learn/presentation/screens/01_sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../core/app_images.dart';
+import '../../core/config/app_images.dart';
 import '../components/custom_animation.dart';
 
 class IntroScreen extends StatefulWidget {

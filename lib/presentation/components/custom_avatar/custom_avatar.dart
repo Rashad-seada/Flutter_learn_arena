@@ -1,5 +1,5 @@
-import 'package:e_learn/core/app_images.dart';
-import 'package:e_learn/core/app_strings.dart';
+import 'package:e_learn/core/config/app_images.dart';
+import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';

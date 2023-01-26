@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:e_learn/core/app_images.dart';
-import 'package:e_learn/core/app_theme.dart';
+import 'package:e_learn/core/config/app_images.dart';
+import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -30,7 +30,6 @@ class InstructorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 58.w,
-      height: 15.w,
       child: Row(
         children: [
 

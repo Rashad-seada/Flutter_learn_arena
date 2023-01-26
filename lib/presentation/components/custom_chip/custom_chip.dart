@@ -22,7 +22,6 @@ class CustomChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
       height: 6.h,
       width: 100.w,
       child: ListView.builder(

@@ -1,9 +1,9 @@
-import 'package:e_learn/core/app_strings.dart';
+import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import '../../core/app_theme.dart';
+import '../../core/config/app_theme.dart';
 
 class RememberMe extends StatelessWidget {
   const RememberMe({Key? key}) : super(key: key);

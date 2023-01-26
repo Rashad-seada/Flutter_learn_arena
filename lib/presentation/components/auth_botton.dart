@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../core/app_strings.dart';
+import '../../core/config/app_strings.dart';
 import '../widgets/custom_text.dart';
 import '../widgets/space.dart';
 
