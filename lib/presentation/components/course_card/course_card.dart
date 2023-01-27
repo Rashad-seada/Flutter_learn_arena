@@ -21,7 +21,7 @@ class CourseCard extends StatelessWidget {
       width: 40.w,
       height: 20.h,
       decoration: BoxDecoration(
-        image: DecorationImage(image: NetworkImage('https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg')),
+        image: const DecorationImage(image: NetworkImage('https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg',),fit: BoxFit.cover),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Container(
