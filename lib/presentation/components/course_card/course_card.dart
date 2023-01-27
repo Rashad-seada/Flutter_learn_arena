@@ -8,7 +8,6 @@ class CourseCard extends StatelessWidget {
   Color color;
   String title;
   double rating;
-
   CourseCard({
     Key? key,
     this.color = Colors.blue,
@@ -22,25 +21,25 @@ class CourseCard extends StatelessWidget {
       width: 40.w,
       height: 20.h,
       decoration: BoxDecoration(
-        image: const DecorationImage(
-          fit: BoxFit.cover,
-            image: NetworkImage(
-          "https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg",
-        ),),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Container(
-          alignment: Alignment.bottomCenter,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                color.withOpacity(0.1),
-                color.withOpacity(0.2),
-                color.withOpacity(0.3),
-                color.withOpacity(0.7),
-                color,
-              ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
-              borderRadius: BorderRadius.circular(15)),
-          padding: EdgeInsets.symmetric(vertical: 2.w, horizontal: 1.h),
+        alignment: Alignment.bottomCenter,
+        decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [
+              color.withOpacity(0.1),
+              color.withOpacity(0.2),
+              color.withOpacity(0.3),
+              color.withOpacity(0.7),
+              color,
+            ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter
+          ),
+          borderRadius: BorderRadius.circular(15)
+        ),
+        padding: EdgeInsets.symmetric(vertical: 2.w,horizontal: 1.h),
           width: 40.w,
           height: 7.h,
           child: Column(
@@ -51,24 +50,14 @@ class CourseCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  CustomText(
-                    text: 'see',
-                    maxLines: 2,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
+                CustomText(text: 'see',maxLines: 2,color: Colors.white,),
+              ],),
+
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomText(
-                    text: title,
-                    maxLines: 2,
-                    color: Colors.white,
-                  ),
-                  Space(
-                    height: .5.h,
-                  ),
+                  CustomText(text: title,maxLines: 2,color: Colors.white,),
+                  Space(height: .5.h,),
                   SmoothStarRating(
                       allowHalfRating: false,
                       starCount: 5,
@@ -78,9 +67,11 @@ class CourseCard extends StatelessWidget {
                       halfFilledIconData: Icons.star_half_rounded,
                       color: Colors.amber,
                       borderColor: Colors.amber,
-                      spacing: 0.0)
+                      spacing:0.0
+                  )
                 ],
               )
+
             ],
           )),
     );
