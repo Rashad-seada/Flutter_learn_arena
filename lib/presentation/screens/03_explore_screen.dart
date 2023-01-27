@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../blocs/main_layout/main_layout_cubit.dart';
 import '../components/courses_section/courses_section.dart';
 import '../components/custom_app_bar.dart';
 import '../components/custom_chip/custom_chip.dart';
@@ -20,7 +22,23 @@ class ExploreScreen extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             children: [
 
-              CustomAppBar(notifNumber: 1,),
+              BlocConsumer<MainLayoutCubit, MainLayoutState>(
+                listener: (context, state) {
+                },
+                builder: (context, state) {
+                  return CustomAppBar(
+                    onTap: (){
+                      final state = context.read<MainLayoutCubit>().sideMenuKey.currentState;
+                      if(state == state?.isOpened){
+                        state?.closeSideMenu();
+                      }else{
+                        state?.openSideMenu();
+                      }
+                    },
+                    notifNumber: 1, name: 'Rashad', prof: "Software developer",
+                  );
+                },
+              ),
 
               HeadTitle(content: 'Find your favourite instructor here!',),
 

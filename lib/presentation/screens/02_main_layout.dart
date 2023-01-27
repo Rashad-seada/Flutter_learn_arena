@@ -25,7 +25,8 @@ class MainLayout extends StatelessWidget {
 
       builder: (context, state) {
         return SideMenu(
-          type: SideMenuType.slideNRotate, // check above images
+          type: SideMenuType.shrinkNSlide,
+
           key: context.read<MainLayoutCubit>().sideMenuKey,
           menu: const CustomSideMenu(),
           child: Scaffold(

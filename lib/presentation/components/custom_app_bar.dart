@@ -5,9 +5,15 @@ import 'notification_botton.dart';
 
 class CustomAppBar extends StatelessWidget {
   int? notifNumber;
+  String name;
+  String prof;
+  Function()? onTap;
   CustomAppBar({
     Key? key,
+    required this.name,
+    required this.prof,
     this.notifNumber,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -20,7 +26,10 @@ class CustomAppBar extends StatelessWidget {
 
         children: [
 
-          CustomAvatar(name:'Rashad',myLevel: 'software engineering',),
+          InkWell(
+              borderRadius: BorderRadius.circular(10.h),
+              onTap: onTap,
+              child: CustomAvatar(name:name,myLevel: prof,)),
 
           NotificationBotton(notifNumber: notifNumber,onTap: (){},)
 

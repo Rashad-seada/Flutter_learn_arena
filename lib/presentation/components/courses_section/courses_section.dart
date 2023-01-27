@@ -8,11 +8,19 @@ import '../../widgets/space.dart';
 import '../course_card/course_card.dart';
 
 class CourseSection extends StatelessWidget {
+
   int itemCount;
+  List<Color> colors;
+
   CourseSection({
     Key? key,
     required this.itemCount,
+    this.colors = const [Color(0xff92b2fd),Color(0xffad7ffb),Color(0xfff594b7)],
   }) : super(key: key);
+
+  Color selectedColor(int index, List<Color> colors){
+    return colors[index % colors.length];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +36,7 @@ class CourseSection extends StatelessWidget {
         Space(height: 1.5.h,),
 
         SizedBox(
-          height: 15.h,
+          height: 20.h,
           width: 100.w,
           child: ListView.builder(
               physics: BouncingScrollPhysics(),
@@ -48,7 +56,9 @@ class CourseSection extends StatelessWidget {
                         right: (index == itemCount - 1)? 7.w: 0
                     ),
                     child: CourseCard(
-
+                      title: "Learn Solid principles and Clean Code",
+                      rating: 4.5,
+                      color: selectedColor(index, colors),
                     ),
                   ),
                 ),
