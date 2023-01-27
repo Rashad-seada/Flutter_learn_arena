@@ -24,15 +24,9 @@ class CourseCard extends StatelessWidget {
       width: 40.w,
       height: 20.h,
       decoration: BoxDecoration(
-<<<<<<<<< Temporary merge branch 1
+
         image: const DecorationImage(image: NetworkImage('https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg',),fit: BoxFit.cover),
-=========
-        image: const DecorationImage(
-          fit: BoxFit.cover,
-            image: NetworkImage(
-          "https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg",
-        ),),
->>>>>>>>> Temporary merge branch 2
+
         borderRadius: BorderRadius.circular(15),
       ),
       child: Container(
