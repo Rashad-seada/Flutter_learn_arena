@@ -20,6 +20,7 @@ class AppStrings {
   static const String listedInstructor = "Listed Instructor";
   static const String nearByGroups = "Near by Groups";
   static const String NOTIFICATION = "Notification";
+  static const String TODAY = "Today";
 
 
 

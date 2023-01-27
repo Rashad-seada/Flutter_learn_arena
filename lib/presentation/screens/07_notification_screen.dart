@@ -32,7 +32,7 @@ class NotificationScreen extends StatelessWidget {
               ),
             ),
         Space(height: 5.h,),
-        CustomText(text: "Today",fontSize: 12.sp,fontWeight: FontWeight.w900,),
+        CustomText(text: AppStrings.TODAY,fontSize: 12.sp,fontWeight: FontWeight.w900,),
         Space(height: 5.h,),
         ListView.builder(itemBuilder: (contex,index){
 
