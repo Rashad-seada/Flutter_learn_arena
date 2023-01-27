@@ -7,12 +7,14 @@ import '../../widgets/space.dart';
 class CourseCard extends StatelessWidget {
   Color color;
   String title;
+  String? Image;
   double rating;
   CourseCard({
     Key? key,
     this.color = Colors.blue,
     required this.title,
     required this.rating,
+
   }) : super(key: key);
 
   @override
