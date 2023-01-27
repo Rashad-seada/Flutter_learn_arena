@@ -9,6 +9,7 @@ import '../components/head_title/head_title.dart';
 import '../components/instructors_section/instructor_section.dart';
 import '../components/search_bar.dart';
 import '../widgets/space.dart';
+import '07_notification_screen.dart';
 
 
 class ExploreScreen extends StatelessWidget {
@@ -27,13 +28,16 @@ class ExploreScreen extends StatelessWidget {
                 },
                 builder: (context, state) {
                   return CustomAppBar(
-                    onTap: (){
+                    onTapAvatar: (){
                       final state = context.read<MainLayoutCubit>().sideMenuKey.currentState;
                       if(state == state?.isOpened){
                         state?.closeSideMenu();
                       }else{
                         state?.openSideMenu();
                       }
+                    },
+                    onTapNotification: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen()));
                     },
                     notifNumber: 1, name: 'Rashad', prof: "Software developer",
                   );
