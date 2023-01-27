@@ -1,8 +1,11 @@
 import 'package:e_learn/core/config/app_strings.dart';
+import 'package:e_learn/presentation/components/notification_section/notification_section_place_holder.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import '../components/notification_section/notification_section.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
@@ -12,31 +15,28 @@ class NotificationScreen extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
           body: Container(
+            height: double.infinity,
+            width: double.infinity,
             padding: EdgeInsets.only(top: 35),
             margin: EdgeInsets.all(20),
-            child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-
+            child: ListView(
+          children: [
             Container(
               width: double.maxFinite,
               child: Row(
-
                 children: [
                   Icon(Icons.arrow_back),
                   Space(width:5.w ,),
                   CustomText(text: AppStrings.NOTIFICATION,fontSize: 15.sp,fontWeight: FontWeight.w900,),
-                  Space(width: 40.w,),
+                  Space(width: 43.w,),
                   Icon(Icons.menu),
                 ],
               ),
             ),
         Space(height: 5.h,),
-        CustomText(text: AppStrings.TODAY,fontSize: 12.sp,fontWeight: FontWeight.w900,),
-        Space(height: 5.h,),
-        ListView.builder(itemBuilder: (contex,index){
 
-        })
+          NotificationSection(),
+        Space(height: 5.h,),
 
       ],
     ),
