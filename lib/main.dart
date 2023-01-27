@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
                 backgroundColor: AppTheme.bgColor
             ),
-            home: NotificationScreen(),
+            home: IntroScreen(),
           );
         },
       ),
