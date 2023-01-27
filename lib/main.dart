@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, Orientation orientation,
             DeviceType deviceType) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
                 backgroundColor: AppTheme.bgColor
             ),
