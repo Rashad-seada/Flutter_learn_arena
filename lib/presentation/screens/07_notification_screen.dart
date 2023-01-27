@@ -13,6 +13,7 @@ class NotificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    theDateOfTheNotification();
     return SafeArea(
         child: Column(
       children: [
