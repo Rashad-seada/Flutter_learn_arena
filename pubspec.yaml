@@ -46,6 +46,7 @@ dependencies:
   image_cropper:
   date_time_picker:
   intl_phone_number_input:
+  flutter_advanced_drawer:
   intl:
   pinput:
   animated_text_kit:

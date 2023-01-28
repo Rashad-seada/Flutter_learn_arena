@@ -17,6 +17,8 @@ class ExploreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     return SafeArea(
         child: Scaffold(
           body: ListView(
@@ -29,12 +31,7 @@ class ExploreScreen extends StatelessWidget {
                 builder: (context, state) {
                   return CustomAppBar(
                     onTapAvatar: (){
-                      final state = context.read<MainLayoutCubit>().sideMenuKey.currentState;
-                      if(state == state?.isOpened){
-                        state?.closeSideMenu();
-                      }else{
-                        state?.openSideMenu();
-                      }
+                      context.read<MainLayoutCubit>().scaffoldkey.currentState?.openDrawer();
                     },
                     onTapNotification: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen()));
