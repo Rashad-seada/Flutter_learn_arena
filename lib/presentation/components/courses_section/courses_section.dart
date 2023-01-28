@@ -3,6 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../core/config/app_strings.dart';
+import '../../../core/config/app_theme.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/space.dart';
 import '../course_card/course_card.dart';
@@ -15,7 +16,7 @@ class CourseSection extends StatelessWidget {
   CourseSection({
     Key? key,
     required this.itemCount,
-    this.colors = const [Color(0xff92b2fd),Color(0xffad7ffb),Color(0xfff594b7)],
+    this.colors = const [AppTheme.primaryColor],
   }) : super(key: key);
 
   Color selectedColor(int index, List<Color> colors){
@@ -56,6 +57,7 @@ class CourseSection extends StatelessWidget {
                         right: (index == itemCount - 1)? 7.w: 0
                     ),
                     child: CourseCard(
+                      image: 'https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg',
                       title: "Learn Solid principles and Clean Code",
                       rating: 4.5,
                       color: selectedColor(index, colors),

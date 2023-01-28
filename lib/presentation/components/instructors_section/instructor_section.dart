@@ -3,6 +3,8 @@ import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sizer/sizer.dart';
+import '../../../core/config/app_theme.dart';
+import '../../screens/08_user_profile/user_profile_screen.dart';
 import '../../widgets/custom_text.dart';
 import '../instructor_card/instructor_card.dart';
 
@@ -12,7 +14,7 @@ class InstructorSection extends StatelessWidget {
 
   InstructorSection({
     Key? key,
-    this.colors = const [Color(0xff92b2fd),Color(0xffad7ffb),Color(0xfff594b7)],
+    this.colors = const [AppTheme.primaryColor],
     required this.itemCount,
   }) : super(key: key);
 
@@ -52,6 +54,9 @@ class InstructorSection extends StatelessWidget {
                           right: (index == itemCount - 1)? 7.w: 0
                       ),
                       child: InstructorCard(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> UserProfileScreen(userId: 1,)));
+                        },
                         name: 'Rashad Seada',
                         jobTilte: 'Software developer',
                         rating: 3.5,

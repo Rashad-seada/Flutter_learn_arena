@@ -7,5 +7,6 @@ class AppImages {
   static const String notification = "images/notif.png";
   static const String instructor = "images/instructor.png";
   static const String verified = "images/verified.png";
+  static const String backButton = "images/back_button.png";
 
 }

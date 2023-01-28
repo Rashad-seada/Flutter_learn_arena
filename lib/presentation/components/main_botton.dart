@@ -3,13 +3,22 @@ import 'package:sizer/sizer.dart';
 import '../../core/config/app_theme.dart';
 
 class MainBotton extends StatelessWidget {
+  double? width;
+  double? height;
+
   Widget child;
   Color color;
+  Color borderColor;
+
   Function()? onTap;
   MainBotton({
     Key? key,
     this.onTap,
+    this.width,
+    this.height,
+    this.borderColor = AppTheme.primaryColor,
     this.color = AppTheme.primaryColor,
+
     required this.child,
   }) : super(key: key);
 
@@ -23,9 +32,10 @@ class MainBotton extends StatelessWidget {
         duration: const Duration(
             milliseconds: 500
         ),
-        width: 85.w,
-        height: 6.h,
+          width: width,
+        height: height,
         decoration: BoxDecoration(
+            border: Border.all(color: borderColor),
             borderRadius: BorderRadius.circular(85.w /2),
             color: color
         ),

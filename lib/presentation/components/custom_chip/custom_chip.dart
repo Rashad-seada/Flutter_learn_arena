@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../../core/config/app_theme.dart';
+
 class CustomChip extends StatelessWidget {
   int itemCount;
   List<Color> colors;
 
   CustomChip({
     Key? key,
-    this.colors = const [Color(0xff92b2fd),Color(0xffad7ffb),Color(0xfff594b7)],
+    this.colors = const [AppTheme.secondryColor],
     required this.itemCount,
   }) : super(key: key);
 
@@ -43,8 +45,14 @@ class CustomChip extends StatelessWidget {
                   ),
                   child: Chip(
                     labelPadding: EdgeInsets.symmetric(vertical: 4,horizontal: 8),
-                    backgroundColor: selectedColor(index, colors),
-                    label: CustomText(text: 'Clean Code',color: Colors.white,),
+                    elevation: 0,
+                    shadowColor: AppTheme.primaryColor,
+                    backgroundColor: Colors.white,
+                    side: BorderSide(
+                      color: selectedColor(index, colors),
+                      width: 1.5,
+                    ),
+                    label: CustomText(text: 'Clean Code',color:selectedColor(index, colors),fontWeight: FontWeight.w600,),
 
                   ),
                 ),

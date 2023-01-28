@@ -7,13 +7,14 @@ import '../../widgets/space.dart';
 class CourseCard extends StatelessWidget {
   Color color;
   String title;
-  String? Image;
+  String image;
   double rating;
 
   CourseCard({
     Key? key,
     this.color = Colors.blue,
     required this.title,
+    required this.image,
     required this.rating,
 
   }) : super(key: key);
@@ -25,7 +26,7 @@ class CourseCard extends StatelessWidget {
       height: 20.h,
       decoration: BoxDecoration(
 
-        image: const DecorationImage(image: NetworkImage('https://assets.entrepreneur.com/content/3x2/2000/20150708172005-coding-working-workspace-apple-macintosh.jpeg',),fit: BoxFit.cover),
+        image:  DecorationImage(image: NetworkImage(image),fit: BoxFit.cover),
 
         borderRadius: BorderRadius.circular(15),
       ),
@@ -76,9 +77,10 @@ class CourseCard extends StatelessWidget {
                       size: 3.w,
                       filledIconData: Icons.star_rate_rounded,
                       halfFilledIconData: Icons.star_half_rounded,
-                      color: Colors.amber,
-                      borderColor: Colors.amber,
-                      spacing: 0.0)
+                      color: Colors.white,
+                      borderColor: Colors.white,
+                      spacing: 0.0
+                  ),
                 ],
               )
             ],

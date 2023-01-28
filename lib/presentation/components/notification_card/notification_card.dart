@@ -1,5 +1,3 @@
-
-
 import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -34,9 +32,9 @@ class NotificationCard extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomText(text: AppStrings.PAYMENT_SUCCESSFUL,fontSize: 13.sp,fontWeight: FontWeight.w900,),
+                    CustomText(text: "",fontSize: 13.sp,fontWeight: FontWeight.w900,),
                     Space(height: 1.h,),
-                    CustomText(text: AppStrings.PAYMENT_CONFIRMATION,fontSize: 10.sp,),
+                    CustomText(text: "",fontSize: 10.sp,),
                   ],
                 ),
               )

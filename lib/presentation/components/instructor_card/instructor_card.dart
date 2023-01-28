@@ -15,7 +15,7 @@ class InstructorCard extends StatelessWidget {
   String jobTilte;
   double rating;
   bool isVerified;
-
+  Function()? onTap;
   InstructorCard({
     Key? key,
     required this.name,
@@ -23,81 +23,71 @@ class InstructorCard extends StatelessWidget {
     required this.rating,
     this.imageUrl = '',
     this.isVerified = false,
+    this.onTap,
     this.color = AppTheme.primaryColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 58.w,
-      child: Row(
-        children: [
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: 58.w,
+        child: Row(
+          children: [
 
-          Container(
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            alignment: Alignment.center,
-            width: 15.w,
-            height: 15.w,
-            decoration: BoxDecoration(
-              color: color,
-              shape: BoxShape.circle,
-            ),
-            child: Container(
+            Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
               alignment: Alignment.center,
-              width: 14.w,
-              height: 14.w,
+              width: 15.w,
+              height: 15.w,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: color,
                 shape: BoxShape.circle,
               ),
-              child: CachedNetworkImage(
-                placeholder:(context,string) => Image.asset(AppImages.instructor),
-                imageUrl: imageUrl,
-                errorWidget: (context,string,dynamic) => Image.asset(AppImages.instructor),
+              child: Container(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                alignment: Alignment.center,
+                width: 14.w,
+                height: 14.w,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: CachedNetworkImage(
+                  placeholder:(context,string) => Image.asset(AppImages.instructor),
+                  imageUrl: imageUrl,
+                  errorWidget: (context,string,dynamic) => Image.asset(AppImages.instructor),
+                ),
               ),
             ),
-          ),
 
-          Space(width: 2.5.w,),
+            Space(width: 2.5.w,),
 
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomText(text: name,fontSize: 12.sp,fontWeight: FontWeight.w400,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CustomText(text: name,fontSize: 13.sp,fontWeight: FontWeight.w400,),
 
-                  Space(width: 1.w,),
+                    Space(width: 1.w,),
 
-                  (isVerified)? Image.asset(AppImages.verified,width: 4.w,height: 4.w,): SizedBox(),
-                ],
-              ),
+                    (isVerified)? Image.asset(AppImages.verified,width: 4.w,height: 4.w,): SizedBox(),
+                  ],
+                ),
+                Space(height: .5.h,),
 
-              CustomText(text: jobTilte,fontSize: 13.sp,color: AppTheme.primaryColor,),
-
-              Space(height: .25.h,),
-
-              SmoothStarRating(
-                  allowHalfRating: false,
-                  starCount: 5,
-                  rating: rating,
-                  size: 3.w,
-                  filledIconData: Icons.star_rate_rounded,
-                  halfFilledIconData: Icons.star_half_rounded,
-                  color: Colors.amber,
-                  borderColor: Colors.amber,
-                  spacing:0.0
-              )
-
-            ],
-          ),
+                CustomText(text: jobTilte,fontSize: 10.sp,color: Colors.grey,),
 
 
 
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

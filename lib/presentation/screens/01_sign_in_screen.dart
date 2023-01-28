@@ -77,6 +77,8 @@ class SignInScreen extends StatelessWidget {
                   Space(height: 2.h,),
 
                   MainBotton(
+                    width: 85.w,
+                    height: 6.h,
                     onTap: ()=> Navigator.pushAndRemoveUntil(
                         context,
                         CustomPageTransition(

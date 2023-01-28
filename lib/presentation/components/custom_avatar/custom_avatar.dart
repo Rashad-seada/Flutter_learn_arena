@@ -8,11 +8,15 @@ import 'package:sizer/sizer.dart';
 class CustomAvatar extends StatelessWidget {
   String image;
   String name;
+  Color nameColor;
   String myLevel;
+  Color myLevelColor;
   CustomAvatar({
     Key? key,
     this.image = AppImages.profile,
     this.myLevel = '',
+    this.myLevelColor = Colors.grey,
+    this.nameColor = Colors.black,
     required this.name,
   }) : super(key: key);
 
@@ -41,17 +45,17 @@ class CustomAvatar extends StatelessWidget {
 
             Row(
               children: [
-                CustomText(text: AppStrings.hi,color: Colors.grey,fontSize: 14.sp,),
+                CustomText(text: AppStrings.hi,color: myLevelColor,fontSize: 14.sp,),
 
                 Space(width: 1.5.w,),
 
-                CustomText(text: "$name!",fontSize: 14.sp,),
+                CustomText(text: "$name!",fontSize: 14.sp,color: nameColor,),
               ],
             ),
 
             Space(height: .3.h,),
 
-            CustomText(text: myLevel ,fontSize: 11.sp,color: Colors.grey,fontWeight: FontWeight.w400,),
+            CustomText(text: myLevel ,fontSize: 11.sp,color: myLevelColor,fontWeight: FontWeight.w400,),
 
           ],
         ),

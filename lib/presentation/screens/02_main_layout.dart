@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
+import '../components/custom_drawer.dart';
 import '../components/custom_nav_bar.dart';
 import '../components/custom_side_menu.dart';
 
@@ -24,26 +25,24 @@ class MainLayout extends StatelessWidget {
       },
 
       builder: (context, state) {
-        return SideMenu(
-          type: SideMenuType.shrinkNSlide,
-
-          key: context.read<MainLayoutCubit>().sideMenuKey,
-          menu: const CustomSideMenu(),
+        return SafeArea(
           child: Scaffold(
+              drawer: CustomDrawer(),
+              key: context.read<MainLayoutCubit>().scaffoldkey,
+              body: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 500),
+                child: screens[currentIndex],
+              ),
 
-            body: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 250),
-              child: screens[currentIndex],
+              bottomNavigationBar: CustomNavBar(
+                onTabChange: (index) {
+                  currentIndex = index;
+                  context.read<MainLayoutCubit>().emit(states[currentIndex]);
+                },
+              ),
             ),
-
-            bottomNavigationBar: CustomNavBar(
-              onTabChange: (index) {
-                currentIndex = index;
-                context.read<MainLayoutCubit>().emit(states[currentIndex]);
-              },
-            ),
-          ),
-        );
+        )
+        ;
       },
     );
   }
