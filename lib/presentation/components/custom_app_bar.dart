@@ -7,13 +7,16 @@ class CustomAppBar extends StatelessWidget {
   int? notifNumber;
   String name;
   String prof;
-  Function()? onTap;
+  Function()? onTapAvatar;
+  Function()? onTapNotification;
+
   CustomAppBar({
     Key? key,
     required this.name,
     required this.prof,
     this.notifNumber,
-    this.onTap,
+    this.onTapAvatar,
+    this.onTapNotification,
   }) : super(key: key);
 
   @override
@@ -28,10 +31,10 @@ class CustomAppBar extends StatelessWidget {
 
           InkWell(
               borderRadius: BorderRadius.circular(10.h),
-              onTap: onTap,
+              onTap: onTapAvatar,
               child: CustomAvatar(name:name,myLevel: prof,)),
 
-          NotificationBotton(notifNumber: notifNumber,onTap: (){},)
+          NotificationBotton(notifNumber: notifNumber,onTap: onTapNotification,)
 
         ],
       ),

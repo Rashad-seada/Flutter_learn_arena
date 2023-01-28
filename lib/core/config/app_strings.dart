@@ -18,7 +18,11 @@ class AppStrings {
   static const String hi = "Hi,";
   static const String searchBar = "Find any course or instructor";
   static const String listedInstructor = "Listed Instructor";
-  static const String nearByGroups = "Nearby Groups";
+  static const String nearByGroups = "Near by Groups";
+  static const String NOTIFICATION = "Notification";
+  static const String TODAY = "Today";
+  static const String PAYMENT_SUCCESSFUL= "Payment Successful!";
+  static const String PAYMENT_CONFIRMATION= "You Have made a course payment";
 
 
 

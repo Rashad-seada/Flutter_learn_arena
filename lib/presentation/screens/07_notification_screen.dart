@@ -1,34 +1,46 @@
+import 'package:e_learn/core/config/app_strings.dart';
+import 'package:e_learn/presentation/components/notification_section/notification_section_place_holder.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:sizer/sizer.dart';
+
+import '../components/notification_section/notification_section.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
 
-  String? theDateOfTheNotification(){
-    Intl.defaultLocale = 'es';
-    DateFormat.jm().format(DateTime.now());
-  }
-
   @override
   Widget build(BuildContext context) {
-    theDateOfTheNotification();
     return SafeArea(
-        child: Column(
-      children: [
-        Container(
-          child: Row(
-            children: [
-              Icon(Icons.arrow_back),
-              CustomText(text: "Notification"),
-            ],
-          ),
-        ),
-        Space(
-          height: 10,
-        )
+        child: Scaffold(
+          body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            padding: EdgeInsets.only(top: 35),
+            margin: EdgeInsets.all(20),
+            child: ListView(
+          children: [
+            Container(
+              width: double.maxFinite,
+              child: Row(
+                children: [
+                  Icon(Icons.arrow_back),
+                  Space(width:5.w ,),
+                  CustomText(text: AppStrings.NOTIFICATION,fontSize: 15.sp,fontWeight: FontWeight.w900,),
+                  Space(width: 43.w,),
+                  Icon(Icons.menu),
+                ],
+              ),
+            ),
+        Space(height: 5.h,),
+
+          NotificationSection(),
+        Space(height: 5.h,),
+
       ],
-    ));
+    ),
+          ),
+        ));
   }
 }
