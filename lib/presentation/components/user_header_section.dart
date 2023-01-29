@@ -86,7 +86,8 @@ class UserHeaderSection extends StatelessWidget {
                   children: [
                   Icon(Icons.explore,color: AppTheme.primaryColor,),
                   Space(width: 2.w),
-                  CustomText(text: AppStrings.website,color: AppTheme.primaryColor,)
+                  CustomText(text: AppStrings.website,color: AppTheme.primaryColor,),
+                    Space(width: 2.w),
 
                 ],
             )),
