@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 import '../blocs/main_layout/main_layout_cubit.dart';
-import '../components/courses_section/courses_section.dart';
 import '../components/custom_app_bar.dart';
 import '../components/custom_chip/custom_chip.dart';
+import '../components/groups_section/groups_section.dart';
 import '../components/head_title/head_title.dart';
 import '../components/instructors_section/instructor_section.dart';
 import '../components/search_bar.dart';
@@ -57,7 +57,7 @@ class ExploreScreen extends StatelessWidget {
 
               Space(height: 2.h,),
 
-              CourseSection(itemCount: 5,),
+              GroupsSection(itemCount: 5,),
 
             ],
           ),

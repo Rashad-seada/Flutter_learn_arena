@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class UserStudents extends StatelessWidget {
-  const UserStudents({Key? key}) : super(key: key);
+class UserGroups extends StatelessWidget {
+  const UserGroups({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

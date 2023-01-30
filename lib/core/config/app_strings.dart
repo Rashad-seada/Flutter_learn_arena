@@ -1,4 +1,5 @@
 class AppStrings {
+
   static const String signInTitle = "Sign in to your account";
   static const String emailTitle = "Email";
   static const String emailHint = "Please enter your Email";
@@ -22,10 +23,9 @@ class AppStrings {
   static const String notification = "Notification";
   static const String courses = "Courses";
   static const String today = "Today";
-  static const String students = "Students";
+  static const String groups = "Groups";
   static const String reviews = "Reviews";
   static const String message = "Message";
   static const String website = "Website";
-
 
 }

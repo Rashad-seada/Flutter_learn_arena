@@ -19,8 +19,8 @@ class UserHeaderSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 28.w,
-          height: 28.w,
+          width: 26.w,
+          height: 26.w,
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
@@ -49,7 +49,7 @@ class UserHeaderSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               StatisticCard(num: '25', cate: AppStrings.courses,),
-              StatisticCard(num: '22379', cate: AppStrings.students,),
+              StatisticCard(num: '15', cate: AppStrings.groups,),
               StatisticCard(num: '9287', cate: AppStrings.reviews,),
 
             ],
@@ -84,10 +84,11 @@ class UserHeaderSection extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                   Icon(Icons.explore,color: AppTheme.primaryColor,),
                   Space(width: 2.w),
                   CustomText(text: AppStrings.website,color: AppTheme.primaryColor,),
-                    Space(width: 2.w),
+                  Space(width: 2.w),
 
                 ],
             )),

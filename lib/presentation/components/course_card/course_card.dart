@@ -1,90 +1,121 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:e_learn/core/config/app_theme.dart';
+import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
-import '../../widgets/custom_text.dart';
+
 import '../../widgets/space.dart';
 
 class CourseCard extends StatelessWidget {
-  Color color;
-  String title;
-  String image;
-  double rating;
+  int id;
+  Axis? scrollDirection;
 
   CourseCard({
     Key? key,
-    this.color = Colors.blue,
-    required this.title,
-    required this.image,
-    required this.rating,
-
+    required this.id,
+    this.scrollDirection
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 40.w,
-      height: 20.h,
+      width: 85.w,
+      height: 16.h,
       decoration: BoxDecoration(
-
-        image:  DecorationImage(image: NetworkImage(image),fit: BoxFit.cover),
-
-        borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.white,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              offset: Offset(20, 15),
+              blurRadius: 15,
+              spreadRadius: 1,
+              color: Colors.grey.withOpacity(0.07),
+            )
+          ]
       ),
-      child: Container(
-          alignment: Alignment.bottomCenter,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                color.withOpacity(0.1),
-                color.withOpacity(0.2),
-                color.withOpacity(0.3),
-                color.withOpacity(0.7),
-                color,
-              ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
-              borderRadius: BorderRadius.circular(15)),
-          padding: EdgeInsets.symmetric(vertical: 2.w, horizontal: 1.h),
-          width: 40.w,
-          height: 7.h,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+      child: Row(
+        children: [
+          Expanded(
+              flex: 3,
+              child: Container(
+                margin: EdgeInsets.all(15),
+                height: double.infinity,
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: AppTheme.bgColor),
+                child: CachedNetworkImage(
+                  imageUrl: "",
+                  placeholder:(_,string)=> Icon(Icons.image_outlined,color: Colors.grey,size: 10.w,),
+                  errorWidget: (_,string,dynamic)=> Icon(Icons.image_outlined,color: Colors.grey,size: 10.w,),
+                  alignment: Alignment.center,
+                )
+              ),
+          ),
+          Expanded(
+            flex: 4,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15,bottom: 15,right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomText(
-                    text: 'see',
-                    maxLines: 2,
-                    color: Colors.white,
+                  Container(
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),color: AppTheme.primaryColor.withOpacity(0.05),),
+                      child: CustomText(text: "Mobile app development",color: AppTheme.primaryColor.withOpacity(0.7),fontSize: 6.sp,fontWeight: FontWeight.w600,),
                   ),
+
+                 CustomText(
+                   text: "Learn Mobile app development in 30 days",
+                   fontSize: 10.sp,
+                   fontWeight: FontWeight.w600,
+                   maxLines: 2,
+                 ),
+
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CustomText(
+                        text: "\$ 42",
+                        fontSize: 11.sp,
+                        color: AppTheme.primaryColor,
+                        fontWeight: FontWeight.w600,
+                        maxLines: 2,
+                      ),
+
+                      Space(width: 2.w,),
+
+                      CustomText(
+                        text: "\$ 75",
+                        fontSize: 8.sp,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w600,
+                        maxLines: 2,
+                      ),
+
+                    ],
+                  ),
+                  
+                  Row(
+                    children: [
+                      Icon(Icons.star_half_rounded,color: Colors.amber,size: 3.5.w,),
+                      Space(width: 1.5.w,),
+
+                      CustomText(
+                        text: "4.7    |    7938 students",
+                        fontSize: 6.5.sp,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w600,
+                        maxLines: 2,
+                      ),
+                    ],
+                  )
+
                 ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomText(
-                    text: title,
-                    maxLines: 2,
-                    color: Colors.white,
-                  ),
-                  Space(
-                    height: .5.h,
-                  ),
-                  SmoothStarRating(
-                      allowHalfRating: false,
-                      starCount: 5,
-                      rating: rating,
-                      size: 3.w,
-                      filledIconData: Icons.star_rate_rounded,
-                      halfFilledIconData: Icons.star_half_rounded,
-                      color: Colors.white,
-                      borderColor: Colors.white,
-                      spacing: 0.0
-                  ),
-                ],
-              )
-            ],
-          )),
-    );
+            ),
+          ),
+        ],
+      ),
+      );
+
   }
 }
