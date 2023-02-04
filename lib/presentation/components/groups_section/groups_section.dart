@@ -33,7 +33,7 @@ class GroupsSection extends StatelessWidget {
           child: CustomText(text: AppStrings.nearByGroups,fontWeight: FontWeight.w400,fontSize: 15.sp,),
         ),
 
-        Space(height: 1.5.h,),
+        Space(height: 1.h,),
 
         SizedBox(
           height: 20.h,

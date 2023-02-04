@@ -27,5 +27,5 @@ class AppStrings {
   static const String reviews = "Reviews";
   static const String message = "Message";
   static const String website = "Website";
-
+  static const String popularCourses  = "Popular Courses";
 }

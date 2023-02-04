@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import '../../components/courses_section/courses_section.dart';
 
 class UserCourses extends StatelessWidget {
@@ -9,6 +10,9 @@ class UserCourses extends StatelessWidget {
     return Scaffold(
 
       body: CoursesSection(
+        leftCardPadding: 4.w,
+        rightCardPadding: 4.w,
+        buttonCardPadding: 3.w,
         scrollDirection: Axis.vertical,
         itemCount: 3,
       ),

@@ -7,12 +7,12 @@ import '../widgets/custom_text.dart';
 import '../widgets/space.dart';
 
 class CustomBackButton extends StatelessWidget {
-  String title ;
+  String? title ;
   Function()? onTap;
   CustomBackButton({
     Key? key,
     this.onTap,
-    required this.title,
+    this.title,
   }) : super(key: key);
 
   @override
@@ -26,8 +26,9 @@ class CustomBackButton extends StatelessWidget {
             },
             icon: Image.asset(AppImages.backButton)
         ),
-        Space(width: 5.w,),
-        CustomText(text: title,fontSize: 18.sp,)
+        (title == null)? SizedBox(): Space(width: 5.w,),
+        (title == null)? SizedBox(): CustomText(text: title!,fontSize: 18.sp,),
+
       ],
     );
   }
