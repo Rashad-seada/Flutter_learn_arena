@@ -8,5 +8,7 @@ class AppImages {
   static const String instructor = "images/instructor.png";
   static const String verified = "images/verified.png";
   static const String backButton = "images/back_button.png";
+  static const String videoError = "images/videoError.png";
+
 
 }
