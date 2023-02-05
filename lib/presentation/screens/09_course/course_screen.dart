@@ -60,9 +60,9 @@ class CourseScreen extends StatelessWidget {
                         ],
                       ),
                     )
-
                   ],
                 ),
+
                 Expanded(
                     flex: 6,
                     child: CustomTabs(

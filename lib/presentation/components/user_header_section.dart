@@ -16,6 +16,7 @@ class UserHeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
@@ -33,15 +34,14 @@ class UserHeaderSection extends StatelessWidget {
             alignment: Alignment.center,
           ),
         ),
-        Space(height: 1.h),
 
-        CustomText(text: "Rashad Seada",fontWeight: FontWeight.w600,fontSize: 16.sp,),
-
-        Space(height: 1.h),
-
-        CustomText(text: "Software developer",fontWeight: FontWeight.w500,fontSize: 11.sp,color: Colors.black54,),
-
-        Space(height: 2.5.h),
+        Column(
+          children: [
+            CustomText(text: "Rashad Seada",fontWeight: FontWeight.w600,fontSize: 16.sp,),
+            Space(height: 2,),
+            CustomText(text: "Software developer",fontWeight: FontWeight.w500,fontSize: 11.sp,color: Colors.black54,),
+          ],
+        ),
 
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 13.w),
@@ -56,7 +56,6 @@ class UserHeaderSection extends StatelessWidget {
           ),
         ),
 
-        Space(height: 2.5.h),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
