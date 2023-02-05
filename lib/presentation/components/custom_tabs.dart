@@ -19,6 +19,10 @@ class CustomTabs extends StatelessWidget {
       length: tabs.length ,
       child: Column(
         children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 7.w),
+            child: const Divider(),
+          ),
           TabBar(
               labelColor: AppTheme.primaryColor,
               unselectedLabelColor: Colors.grey,
@@ -34,6 +38,7 @@ class CustomTabs extends StatelessWidget {
 
           Expanded(
             child: TabBarView(
+              physics: BouncingScrollPhysics(),
               children: pages,
             ),
           ),

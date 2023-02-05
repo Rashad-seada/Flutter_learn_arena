@@ -30,7 +30,7 @@ class MainLayout extends StatelessWidget {
               drawer: CustomDrawer(),
               key: context.read<MainLayoutCubit>().scaffoldkey,
               body: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 1000),
                 child: screens[currentIndex],
               ),
 

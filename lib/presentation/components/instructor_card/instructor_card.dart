@@ -13,14 +13,12 @@ class InstructorCard extends StatelessWidget {
   String imageUrl;
   String name;
   String jobTilte;
-  double rating;
   bool isVerified;
   Function()? onTap;
   InstructorCard({
     Key? key,
     required this.name,
     required this.jobTilte,
-    required this.rating,
     this.imageUrl = '',
     this.isVerified = false,
     this.onTap,
@@ -39,26 +37,16 @@ class InstructorCard extends StatelessWidget {
             Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
               alignment: Alignment.center,
-              width: 15.w,
-              height: 15.w,
+              width: 13.w,
+              height: 13.w,
               decoration: BoxDecoration(
                 color: color,
                 shape: BoxShape.circle,
               ),
-              child: Container(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                alignment: Alignment.center,
-                width: 14.w,
-                height: 14.w,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-                child: CachedNetworkImage(
-                  placeholder:(context,string) => Image.asset(AppImages.instructor),
-                  imageUrl: imageUrl,
-                  errorWidget: (context,string,dynamic) => Image.asset(AppImages.instructor),
-                ),
+              child: CachedNetworkImage(
+                placeholder:(context,string) => Image.asset(AppImages.profile),
+                imageUrl: imageUrl,
+                errorWidget: (context,string,dynamic) => Image.asset(AppImages.profile),
               ),
             ),
 
@@ -71,7 +59,7 @@ class InstructorCard extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CustomText(text: name,fontSize: 13.sp,fontWeight: FontWeight.w400,),
+                    CustomText(text: name,fontSize: 11.sp,fontWeight: FontWeight.w600,maxLines: 1,),
 
                     Space(width: 1.w,),
 
@@ -80,7 +68,7 @@ class InstructorCard extends StatelessWidget {
                 ),
                 Space(height: .5.h,),
 
-                CustomText(text: jobTilte,fontSize: 10.sp,color: Colors.grey,),
+                CustomText(text: jobTilte,fontSize: 10.sp,color: Colors.grey,maxLines: 1,),
 
 
 
