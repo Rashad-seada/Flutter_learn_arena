@@ -59,7 +59,6 @@ class InstructorSection extends StatelessWidget {
                         },
                         name: 'Rashad Seada',
                         jobTilte: 'Software developer',
-                        rating: 3.5,
                         color: selectedColor(index, colors),
                         imageUrl: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/events/IMG_4510_MdEL17t.jpg",
                         isVerified: true,

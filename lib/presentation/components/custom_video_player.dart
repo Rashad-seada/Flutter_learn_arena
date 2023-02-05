@@ -2,7 +2,6 @@ import 'package:e_learn/core/config/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:chewie/chewie.dart';
 import 'package:video_player/video_player.dart';
-import '../widgets/custom_text.dart';
 
 class CustomVideoPlayer extends StatefulWidget {
   final VideoPlayerController videoPlayerController;

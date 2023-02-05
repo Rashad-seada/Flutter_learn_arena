@@ -45,26 +45,23 @@ class ExploreScreen extends StatelessWidget {
                   );
                 },
               ),
+              Space(height: 1.h,),
 
               HeadTitle(content: 'Find your favourite instructor here!',),
 
-              Space(height: 2.5.h,),
+              Space(height: 4.h,),
 
               SearchBar(),
 
-              Space(height: 1.h,),
+              Space(height: 0.5.h,),
 
               CustomChip(itemCount: 6,),
 
-              Space(height: 2.h,),
-
-              InstructorSection(itemCount: 4,),
-
-              Space(height: 2.h,),
+              Space(height: 3.h,),
 
               ExploreCoursesSection(),
 
-              GroupsSection(itemCount: 5,),
+              //GroupsSection(itemCount: 5,),
 
               Space(height: 2.h,),
 

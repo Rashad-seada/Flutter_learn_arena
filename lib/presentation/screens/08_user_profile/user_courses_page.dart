@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../components/courses_section/courses_section.dart';
 
-class UserCourses extends StatelessWidget {
-  const UserCourses({Key? key}) : super(key: key);
+class UserCoursesPage extends StatelessWidget {
+  const UserCoursesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

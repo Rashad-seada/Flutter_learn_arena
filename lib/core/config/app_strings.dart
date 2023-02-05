@@ -28,4 +28,14 @@ class AppStrings {
   static const String message = "Message";
   static const String website = "Website";
   static const String popularCourses  = "Popular Courses";
+  static const String about  = "About";
+  static const String lessons  = "Lessons";
+  static const String mentor  = "Mentor";
+  static const String aboutCourse  = "About Course";
+  static const String readMore  = "Read more";
+  static const String readLess  = "Read less";
+
+
+
+
 }
