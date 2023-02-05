@@ -1,9 +1,7 @@
+import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/components/custom_back_button.dart';
-import 'package:e_learn/presentation/components/custom_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:video_player/video_player.dart';
-
 
 class CourseScreen extends StatelessWidget {
   int id;
@@ -15,23 +13,37 @@ class CourseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
-        slivers: [
-
-          SliverAppBar(
-            leading: CustomBackButton(),
-            expandedHeight: 40.h,
-            flexibleSpace: FlexibleSpaceBar(
-              background: CustomVideoPlayer(
-                videoPlayerController: VideoPlayerController.network(
-                  "https://happy.videvo.net/videvo_files/video/premium/partners0238/large_watermarked/BB_cb8b156b-806f-4ff5-8e6b-f39f5ec1d3d2_preview.mp4",
-
+      body: ListView(
+        children: [
+          SizedBox(
+            width: 100.w,
+            height: 100.h,
+            child: Column(
+              children: [
+                
+                Expanded(
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 30.h,
+                        width: 100.w,
+                        color: AppTheme.primaryColor,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 2.h,left: 3.w),
+                        child: CustomBackButton(color: Colors.white,),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              collapseMode: CollapseMode.pin,
+                Expanded(child: Container(color: Colors.amber,))
+                
+                
+                
+              ],
             ),
-          ),
+          )
+
 
         ],
       ),

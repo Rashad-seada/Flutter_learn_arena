@@ -3,8 +3,9 @@ import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../widgets/space.dart';
+import '../field/field_card.dart';
+import '../price.dart';
 
 class CourseCard extends StatelessWidget {
   int id;
@@ -61,11 +62,9 @@ class CourseCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                        padding: EdgeInsets.all(6),
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),color: AppTheme.primaryColor.withOpacity(0.05),),
-                        child: CustomText(text: "Mobile app development",color: AppTheme.primaryColor.withOpacity(0.7),fontSize: 6.sp,fontWeight: FontWeight.w600,),
-                    ),
+
+                    FieldCard( title:"Mobile app development"),
+
 
                    CustomText(
                      text: "Learn Mobile app development in 30 days",
@@ -74,29 +73,8 @@ class CourseCard extends StatelessWidget {
                      maxLines: 2,
                    ),
 
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CustomText(
-                          text: "\$ 42",
-                          fontSize: 11.sp,
-                          color: AppTheme.primaryColor,
-                          fontWeight: FontWeight.w600,
-                          maxLines: 2,
-                        ),
+                    Price(price: 42.0,priceBefore: 75,),
 
-                        Space(width: 2.w,),
-
-                        CustomText(
-                          text: "\$ 75",
-                          fontSize: 8.sp,
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w600,
-                          maxLines: 2,
-                        ),
-
-                      ],
-                    ),
 
                     Row(
                       children: [
