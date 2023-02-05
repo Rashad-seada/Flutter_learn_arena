@@ -8,7 +8,6 @@ import 'package:e_learn/presentation/screens/09_course/course_lessons_page.dart'
 import 'package:e_learn/presentation/screens/09_course/course_reviews_page.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../core/config/app_strings.dart';
 import '../../components/custom_tabs.dart';
 import '../../widgets/custom_text.dart';
@@ -58,7 +57,6 @@ class CourseScreen extends StatelessWidget {
                           CustomText(text: "Intro to Clean Code and (SOLID) and the the principles of uncle pop",fontSize: 17.sp,fontWeight: FontWeight.w600,maxLines: 2,),
                           FieldCard(title: "Clean Code"),
                           Price(price: 40,priceBefore: 75,fontSize: 14.sp,),
-                          const SizedBox(),
                         ],
                       ),
                     )
