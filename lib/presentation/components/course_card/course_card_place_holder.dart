@@ -73,7 +73,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                       baseColor: Colors.grey[300]!.withOpacity(0.6),
                       highlightColor: Colors.grey[100]!,
                       child: SizedBox(
-                        height: .5.h,
+                        height: .2.h,
                         width: 22.5.w,
                       ),
                     ),
@@ -88,7 +88,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                       baseColor: Colors.grey[300]!.withOpacity(0.6),
                       highlightColor: Colors.grey[100]!,
                       child: SizedBox(
-                        height: .5.h,
+                        height: .2.h,
                         width: 25.w,
                       ),
                     ),
@@ -103,7 +103,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                       baseColor: Colors.grey[300]!.withOpacity(0.6),
                       highlightColor: Colors.grey[100]!,
                       child: SizedBox(
-                        height: .5.h,
+                        height: .2.h,
                         width: 33.w,
                       ),
                     ),
@@ -122,8 +122,8 @@ class CourseCardPlaceHolder extends StatelessWidget {
                           baseColor: Colors.grey[300]!.withOpacity(0.6),
                           highlightColor: Colors.grey[100]!,
                           child: SizedBox(
-                            height: 1.5.h,
-                            width: 4.w,
+                            height: 1.4.h,
+                            width: 3.w,
                           ),
                         ),
                       ),
@@ -141,7 +141,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                           highlightColor: Colors.grey[100]!,
                           child: SizedBox(
                             height: 1.h,
-                            width: 3.w,
+                            width: 2.w,
                           ),
                         ),
                       ),
@@ -155,7 +155,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                         child: Icon(
                           Icons.star_half_rounded,
                           color: Colors.amber,
-                          size: 3.5.w,
+                          size: 4.w,
                         ),
                       ),
                       Space(
@@ -171,7 +171,7 @@ class CourseCardPlaceHolder extends StatelessWidget {
                           baseColor: Colors.grey[300]!.withOpacity(0.6),
                           highlightColor: Colors.grey[100]!,
                           child: SizedBox(
-                            height: .5.h,
+                            height: .2.h,
                             width: 22.w,
                           ),
                         ),

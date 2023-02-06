@@ -23,10 +23,8 @@ class ExploreCoursesSection extends StatelessWidget {
         CoursesSection(
           itemCount: 3,
           scrollDirection: Axis.horizontal,
-          width: 100.w,
-          height: 18.h,
           leftCardPadding: 1.5.h,
-          buttonCardPadding: 3.h,
+          buttonCardPadding: 3.h, rightCardPadding: 3,
         ),
       ],
     );

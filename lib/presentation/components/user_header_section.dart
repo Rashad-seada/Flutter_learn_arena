@@ -20,7 +20,7 @@ class UserHeaderSection extends StatelessWidget {
       children: [
         Container(
           width: 26.w,
-          height: 26.w,
+          height: 22.w,
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
