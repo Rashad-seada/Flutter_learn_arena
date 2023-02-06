@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class RatingAndRivewsCount extends StatelessWidget{
-
   IconData? icon;
   String? rate;
   String? reviews;
