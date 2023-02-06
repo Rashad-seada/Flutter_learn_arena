@@ -1,3 +1,4 @@
+import 'package:e_learn/core/config/app_images.dart';
 import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/components/custom_back_button.dart';
 import 'package:e_learn/presentation/components/field/field_card.dart';
@@ -9,6 +10,7 @@ import 'package:e_learn/presentation/screens/09_course/course_reviews_page.dart'
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../../core/config/app_strings.dart';
+import '../../components/course_info.dart';
 import '../../components/custom_tabs.dart';
 import '../../widgets/custom_text.dart';
 
@@ -55,8 +57,24 @@ class CourseScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CustomText(text: "Intro to Clean Code and (SOLID) and the the principles of uncle pop",fontSize: 17.sp,fontWeight: FontWeight.w600,maxLines: 2,),
-                          FieldCard(title: "Clean Code"),
+                          Row(
+                            children: [
+                              FieldCard(title: "Clean Code"),
+
+                            ],
+                          ),
                           Price(price: 40,priceBefore: 75,fontSize: 14.sp,),
+                          Row(
+                            mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                            children: [
+                              CourseInfo(icon:Icons.people,
+                                text:"1232 "+AppStrings.students,),
+                              CourseInfo(icon:Icons.access_time_filled_rounded,
+                                text:"1.2 "+AppStrings.hours,),
+                              CourseInfo(icon:Icons.newspaper_rounded,
+                                text:AppStrings.certificate,)
+                            ],
+                          )
                         ],
                       ),
                     )
