@@ -7,11 +7,13 @@ import 'package:e_learn/presentation/components/price.dart';
 import 'package:e_learn/presentation/screens/09_course/course_about_page.dart';
 import 'package:e_learn/presentation/screens/09_course/course_lessons_page.dart';
 import 'package:e_learn/presentation/screens/09_course/course_reviews_page.dart';
+import 'package:e_learn/presentation/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../../core/config/app_strings.dart';
 import '../../components/course_info.dart';
 import '../../components/custom_tabs.dart';
+import '../../components/rating_and_reviews_count.dart';
 import '../../widgets/custom_text.dart';
 
 class CourseScreen extends StatelessWidget {
@@ -60,10 +62,17 @@ class CourseScreen extends StatelessWidget {
                           Row(
                             children: [
                               FieldCard(title: "Clean Code"),
-
+                              Space(height:2.h,),
+                              RatingAndRivewsCount(
+                                icon:Icons.star,
+                                rate:"4.5",
+                                reviews:"(1.194 reviews)",
+                              )
                             ],
                           ),
+                          Space(height:1.h,),
                           Price(price: 40,priceBefore: 75,fontSize: 14.sp,),
+                          Space(height:1.h,),
                           Row(
                             mainAxisAlignment:MainAxisAlignment.spaceBetween,
                             children: [
