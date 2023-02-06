@@ -1,3 +1,4 @@
+import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -18,8 +19,8 @@ class RatingAndRivewsCount extends StatelessWidget{
     return Row(
       children: [
         Icon(icon,color:Colors.amber,size:4.5.w,),
-        Text("${rate}"),
-        Text("${reviews}")
+        CustomText(text: '${rate}',),
+        CustomText(text:"${reviews}")
       ],
     );
   }
