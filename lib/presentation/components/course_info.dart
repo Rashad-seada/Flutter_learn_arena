@@ -7,17 +7,11 @@ import '../widgets/space.dart';
 
 class CourseInfo extends StatelessWidget{
   IconData? icon;
-  Color? color;
   String text;
-  double? fontsize;
-  FontWeight? fontWeight;
 
   CourseInfo({
     this.icon,
     required this.text,
-    this.fontsize,
-    this.fontWeight,
-    this.color
   });
 
 
