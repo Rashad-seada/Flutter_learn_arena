@@ -1,7 +1,7 @@
 import 'package:e_learn/core/config/app_theme.dart';
 import 'package:e_learn/presentation/components/custom_back_button.dart';
 import 'package:e_learn/presentation/components/field/field_card.dart';
-import 'package:e_learn/presentation/components/main_botton.dart';
+import 'package:e_learn/presentation/components/main_button.dart';
 import 'package:e_learn/presentation/components/price.dart';
 import 'package:e_learn/presentation/screens/09_course/course_about_page.dart';
 import 'package:e_learn/presentation/screens/09_course/course_lessons_page.dart';
@@ -32,8 +32,8 @@ class CourseScreen extends StatelessWidget {
               children: [
                 
                 Column(
-
                   children: [
+
                     Stack(
                       children: [
                         Container(
@@ -56,10 +56,11 @@ class CourseScreen extends StatelessWidget {
                         children: [
                           CustomText(text: "Intro to Clean Code and (SOLID) and the the principles of uncle pop",fontSize: 17.sp,fontWeight: FontWeight.w600,maxLines: 2,),
                           FieldCard(title: "Clean Code"),
-                          Price(price: 40,priceBefore: 75,fontSize: 14.sp,),
+                          Price(price: 40,priceBefore: 75,fontSize: 16.sp,),
                         ],
                       ),
-                    )
+                    ),
+
                   ],
                 ),
 
@@ -78,9 +79,8 @@ class CourseScreen extends StatelessWidget {
                       ],
                     )
                 ),
-                
-                
-                
+
+
               ],
             ),
           )
@@ -90,10 +90,10 @@ class CourseScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsets.symmetric(horizontal: 7.w,vertical: 1.h),
-        child: MainBotton(
+        child: MainButton(
           width: 75.w,
           height: 6.h,
-          child: CustomText(text: 'Enroll Course - \$40',color: Colors.white,),),
+          child: CustomText(text: '${AppStrings.enrollCourse}\$40',color: Colors.white,),),
       ),
     );
   }

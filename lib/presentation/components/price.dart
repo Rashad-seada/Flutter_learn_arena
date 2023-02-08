@@ -34,7 +34,7 @@ class Price extends StatelessWidget {
         (priceBefore != null)?
         CustomText(
           text: "\$ $priceBefore",
-          fontSize: fontSize - 3.sp,
+          fontSize: fontSize - 4.sp,
           color: Colors.grey,
           fontWeight: FontWeight.w600,
           maxLines: 2,

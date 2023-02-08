@@ -2,12 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_learn/core/config/app_images.dart';
 import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/core/config/app_theme.dart';
-import 'package:e_learn/presentation/components/main_botton.dart';
+import 'package:e_learn/presentation/components/main_button.dart';
 import 'package:e_learn/presentation/components/statistics_card.dart';
 import 'package:e_learn/presentation/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../widgets/space.dart';
 
 class UserHeaderSection extends StatelessWidget {
@@ -23,7 +22,7 @@ class UserHeaderSection extends StatelessWidget {
           width: 26.w,
           height: 26.w,
           clipBehavior: Clip.hardEdge,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
           ),
 
@@ -61,13 +60,13 @@ class UserHeaderSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-            MainBotton(
+            MainButton(
               width: 43.w,
               height: 5.h,
               child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.message_rounded,color: Colors.white,),
+                const Icon(Icons.message_rounded,color: Colors.white,),
                 Space(width: 2.w),
                 CustomText(text: AppStrings.message,color: Colors.white,)
               ],
@@ -75,7 +74,7 @@ class UserHeaderSection extends StatelessWidget {
 
             Space(width: 3.w,),
 
-            MainBotton(
+            MainButton(
                 width: 43.w,
                 height: 5.h,
                 color: Colors.white,
@@ -84,7 +83,7 @@ class UserHeaderSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
-                  Icon(Icons.explore,color: AppTheme.primaryColor,),
+                  const Icon(Icons.explore,color: AppTheme.primaryColor,),
                   Space(width: 2.w),
                   CustomText(text: AppStrings.website,color: AppTheme.primaryColor,),
                   Space(width: 2.w),

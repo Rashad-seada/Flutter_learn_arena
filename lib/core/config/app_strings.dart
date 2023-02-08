@@ -34,8 +34,9 @@ class AppStrings {
   static const String aboutCourse  = "About Course";
   static const String readMore  = "Read more";
   static const String readLess  = "Read less";
-
-
+  static const String enrollCourse  = "Enroll Course - ";
+  static const String section  = "Section";
+  static const String minute  = "mins";
 
 
 }

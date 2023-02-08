@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../core/config/app_theme.dart';
 
-class MainBotton extends StatelessWidget {
+class MainButton extends StatelessWidget {
   double? width;
   double? height;
 
@@ -11,7 +11,7 @@ class MainBotton extends StatelessWidget {
   Color borderColor;
 
   Function()? onTap;
-  MainBotton({
+  MainButton({
     Key? key,
     this.onTap,
     this.width,

@@ -1,7 +1,7 @@
 import 'package:e_learn/core/config/app_images.dart';
 import 'package:e_learn/core/config/app_strings.dart';
 import 'package:e_learn/presentation/blocs/main_layout/main_layout_cubit.dart';
-import 'package:e_learn/presentation/components/main_botton.dart';
+import 'package:e_learn/presentation/components/main_button.dart';
 import 'package:e_learn/presentation/screens/02_main_layout.dart';
 import 'package:e_learn/presentation/screens/03_explore_screen.dart';
 import 'package:e_learn/presentation/screens/04_learn_screen.dart';
@@ -76,7 +76,7 @@ class SignInScreen extends StatelessWidget {
 
                   Space(height: 2.h,),
 
-                  MainBotton(
+                  MainButton(
                     width: 85.w,
                     height: 6.h,
                     onTap: ()=> Navigator.pushAndRemoveUntil(
